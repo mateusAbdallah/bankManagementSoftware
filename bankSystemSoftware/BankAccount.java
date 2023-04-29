@@ -3,7 +3,7 @@ package bankSystemSoftware;
 public class BankAccount {
 
 	double balance;
-	double newBalance;
+	double prevTrans;
 	String customerName;
 	String customerId;
 	
@@ -15,8 +15,17 @@ public class BankAccount {
 	
 	void deposit(double amount) {
 		if(amount != 0) {
-			bal += amount;
-			newBalance = amount;
+			balance += amount;
+			prevTrans = amount;
+		}
+	}
+	
+	void withdraw(double amt) {
+		if(balance < amt)
+			System.out.println("Bank balance insufficient");
+		else if(amt != 0 && balance >= amt) {
+			balance -= amt;
+			prevTrans -= amt;
 		}
 	}
 }
