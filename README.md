@@ -1,5 +1,6 @@
 # Bank Management Software
 Simplest software that you can deal with bank accounts and transactions.
+Console application that works as a bank service (deposit,withdraw and get balance).
 
 - [x] Create class Bank Account
   - [x] Create methods that calculate the balance (deposit and withdraw)
